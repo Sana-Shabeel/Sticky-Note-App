@@ -11,6 +11,7 @@ function NotesList({ notes, handleAddNote, handleDeleteNote }) {
           text={note.text}
           date={note.date}
           handleDeleteNote={handleDeleteNote}
+          handleAddNote={handleAddNote}
         />
       ))}
     </div>
