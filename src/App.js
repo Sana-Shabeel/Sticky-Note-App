@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 import Search from "./components/Search";
-
 import NotesList from "./components/Notes";
 
 function App(params) {
@@ -22,7 +21,6 @@ function App(params) {
       date: "23/03/2022",
     },
   ]);
-
   const [searchText, setsearchText] = useState("");
   // SAVING THE NOTES TO LOCALSTORAGE
   useEffect(() => {
@@ -35,11 +33,11 @@ function App(params) {
     localStorage.setItem("react-sticky-note", JSON.stringify(notes));
   }, [notes]);
 
-  const addNote = (inputText) => {
+  const addNote = (inputText, id) => {
     const date = new Date();
     setNotes((prev) => [
       { id: nanoid(), text: inputText, date: date.toLocaleDateString() },
-      ...notes,
+      ...notes.filter((note) => note.id !== id),
     ]);
   };
   const deleteNote = (id) => {
@@ -49,9 +47,7 @@ function App(params) {
     <div className="container">
       <Search handleSearchNote={setsearchText} />
       <NotesList
-        notes={notes.filter((note) =>
-          note.text.toLocaleLowerCase().includes(searchText)
-        )}
+        notes={notes.filter((note) => note.text.includes(searchText))}
         handleAddNote={addNote}
         handleDeleteNote={deleteNote}
       />
