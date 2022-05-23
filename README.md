@@ -6,15 +6,18 @@ A sticky note application built with react.js and css
 
 A note taking application similar to sticky notes in design.
 
+## Features
 - Search for a note
 - Delete a note
 - Stores note in local storage
-- Click the mic button to take a note
+- Record a note using speech recognition API
+- Edit A note
+- Fully Responsive
 
 ## Built with
 
 - React.js
-- Css
+- Css Grid
 
 ## Screenshots
 
