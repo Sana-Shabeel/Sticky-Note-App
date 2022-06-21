@@ -4,7 +4,12 @@ A sticky note application built with react.js and css
 
 ## Description
 
-A note taking application similar to sticky notes in design.
+I want to create an app that i could use in my day to day live and i created this note taking app. 
+it is similar to sticky notes in design and it stores the notes, 
+so users can refresh the page and the notes would still be there.
+I also wanted to give users the ability to use speach recognition instead of typing it out. 
+
+After using it for some time i wanted to add a feature that would let me edit a note.
 
 ## Features
 - Search for a note
