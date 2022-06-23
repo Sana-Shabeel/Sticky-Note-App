@@ -19,6 +19,10 @@ After using it for some time i wanted to add a feature that would let me edit a 
 - Edit A note
 - Fully Responsive
 
+## Links
+
+Live site => [On netlify](https://sticky-notes-react-app.netlify.app/)
+
 ## Built with
 
 - React.js
